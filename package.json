@@ -1,0 +1,48 @@
+{
+  "name": "sveltekit-adapter-fastly",
+  "version": "0.0.1",
+  "description": "SvelteKit adapter for Fastly Compute at Edge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theshortcut/sveltekit-adapter-fastly"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "import": "./index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "types": "index.d.ts",
+  "files": [
+    "ambient.d.ts",
+    "files",
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "lint": "prettier --check . --config .prettierrc --ignore-path .gitignore",
+    "format": "pnpm lint --write",
+    "check": "tsc"
+  },
+  "devDependencies": {
+    "@fastly/js-compute": "^3.7.2",
+    "@fastly/compute-js-static-publish": "^5.2.0",
+    "@sveltejs/kit": "^1.27.1",
+    "@types/node": "^20.8.9",
+    "prettier": "^3.0.3",
+    "typescript": "^5.2.2"
+  },
+  "peerDependencies": {
+    "@sveltejs/kit": "^1.27.1"
+  },
+  "dependencies": {
+    "@iarna/toml": "^2.2.5"
+  },
+  "packageManager": "pnpm@8.9.2",
+  "engines": {
+    "pnpm": "^8.0.0"
+  }
+}
